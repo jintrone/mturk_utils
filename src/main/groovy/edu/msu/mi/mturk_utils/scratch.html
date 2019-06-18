@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- Bootstrap v3.0.3 -->
+<!-- Bootstrap v3.0.3 -->
+<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet"/>
+<section class="container" id="Other"
+         style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:0.9em;">
+    <div class="row col-xs-12 col-md-12"><!-- Instructions -->
+        <div class="panel panel-info">
+            <div class="panel-heading"><strong>Instructions</strong></div>
+
+            <div class="panel-body">
+                <p>Read the following post and indicate the approximate percentage of words that are dedicated to
+                    telling stories.<br/>
+                    <br/>
+                    For our purposes, a&nbsp;<strong>STORY</strong> is defined as as one or more episodes, where an
+                    episode consists of:</p>
+
+                <ul>
+                    <li>An initiating event&mdash;either internal (emotional or cognitive, such as &ldquo;I became
+                        unhappy with my weight&rdquo;) or external (e.g., &ldquo;I developed a tumor&rdquo;)
+                    </li>
+                    <li>One or more intentional actions or a specific plan to engage in such actions to address the
+                        initiating event (e.g., &quot;I went on a diet&quot; or &quot;I went for radiation treatments&quot;
+                        or &quot;I&#39;m going for radiation treatments tomorrow&quot;). Actions do not have to be
+                        written in first person. For example, &quot;the doctor gave me a prescription for zoloft&quot;;
+                        describes an intentional action taken by &quot;the doctor.&quot;</li>
+                    <li>Optionally, a set of consequences (e.g., &quot;I didn&#39;t lose weight&quot; or &quot;The tumor
+                        shrank&quot;).
+                    </li>
+                </ul>
+
+                <p>A story may contain contextual information that is needed to understand the story (e.g., &quot;I have
+                    been overweight all my life&quot; or &quot;My father died of cancer&quot;). Initiating events and
+                    intentional actions must be&nbsp;<strong><i>explicit</i></strong> (not implied)<i>&nbsp;</i>for text
+                    to be considered an episode.</p>
+
+                <p><a data-target="#myModal" data-toggle="modal" href="#myModal">See some worked examples!</a> <a
+                        href="https://youtu.be/KHLwdvLWAsU" target="_other">And a <b>highly recommended</b> tutorial
+                    video!</a></p>
+
+                <p><strong>IMPORTANT: &nbsp;</strong>You will be given a bonus based how close you are to the average
+                    answer (up to $.05, awareded in a lump sum). If you are more than one standard deviation from the
+                    mean&nbsp;80% of the time (after you&#39;ve done 25 HITS) you will be disqualified (via a
+                    qualification)<strong>&nbsp;</strong>from working on additional HITS from this batch (watch the <a
+                            href="https://youtu.be/KHLwdvLWAsU" target="_other">tutorial</a> to avoid this!)</p>
+
+                <p>Please note that this HIT was priced to <span
+                        style="font-family: Verdana, Geneva, sans-serif; font-size: 11.7px;">to pay at least $9.60 / hr&nbsp;</span>based
+                    on an average of&nbsp;1&nbsp;minute&nbsp;per HIT (based on trial runs) .&nbsp;</p>
+            </div>
+        </div>
+        <!-- End Instructions --><!-- Content Body -->
+
+        <section><strong>Forum name:&nbsp;</strong>${corpus}
+
+            <fieldset>
+                <p>&quot;${text}&quot;</p>
+            </fieldset>
+
+            <form action="https://www.mturk.com/mturk/externalSubmit" id="mturk_form" method="post" name="mturk_form">
+                <input id="assignmentId" name="assignmentId" type="hidden" value=""/>
+                <div class="panel panel-primary">
+                    <div class="panel-heading"><strong>Indicate the approximate percentage of words that are dedicated
+                        to telling stories:</strong></div>
+
+                    <div class="panel-body">
+                        <table class="inputField">
+                            <tbody>
+                            <tr>
+                                <td><input name="storyRating" type="radio" value="0"/></td>
+                                <td><input name="storyRating" type="radio" value="1"/></td>
+                                <td><input name="storyRating" type="radio" value="2"/></td>
+                                <td><input name="storyRating" type="radio" value="3"/></td>
+                                <td><input name="storyRating" type="radio" value="4"/></td>
+                            </tr>
+                            <tr>
+                                <td><strong>No story</strong></td>
+                                <td><strong>1%-25%</strong></td>
+                                <td><strong>26%-50%</strong></td>
+                                <td><strong>50%-75%</strong></td>
+                                <td><strong>76%-100%</strong></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="text-center"><input class="btn btn-lg btn-primary" id="submitButton" name="Submit"
+                                                type="submit" value="Submit"/></div>
+            </form>
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog"><!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal" type="button">&times;</button>
+
+                            <h4 class="modal-title">Examples</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>Please not that the following analysis are more detailed that is expected from you!</p>
+
+                            <h2>Example 1</h2>
+
+                            <div><strong>Key:</strong><span class="bg-context">Context.</span> <span class="bg-event">Initiating event.</span>
+                                <span class="bg-action">Action or plan.</span> <span
+                                        class="bg-conseq">Consequence.</span></div>
+
+                            <div class="content">
+                                <p><span class="bg-context">I am 53 and have been in perimenopause for the last 4 years or so.</span>
+                                    <span class="bg-event">I expected to gain weight, and I have, about 25 lbs.</span>
+                                    <span class="bg-action">I also began taking an antidepressant then (Prozac)</span>
+                                    <span class="bg-event">to correct a lifelong problem with anxiety.</span> My husband
+                                    would tell you that, except for hot flashes, I am an &quot;easy&quot; case of
+                                    perimenopause. <span class="bg-conseq">I don&#39;t have mood swings and the Prozac has helped hugely.</span>
+                                    <span class="bg-context"> My problem is that I used to be quite active, running three miles a day.</span>
+                                    <span class="bg-event">It began to be painful (back) to do that,</span> <span
+                                            class="bg-action">so I fell off running altogether.</span> <span
+                                            class="bg-event">At the same time I began to have a NEED to</span> <span
+                                            class="bg-action">take naps almost everyday.</span> <span class="bg-event">Hot flashes can wake me several times a night. For about the past year and a half, my sleep has been horrible. Insomnia has been a big problem, but even when I do sleep all right, which isn&#39;t often, I still need that nap.</span>
+                                    <span class="bg-conseq">But I think the nap makes it difficult for me to sleep at night. I can lie there for more than an hour before going off to sleep.</span>
+                                    <span class="bg-action">I do still exercise three times a week,(aerobic once, and weights twice, at a health club).</span>
+                                    <span class="bg-action">I hate taking sleeping pills because for the next day I am wiped out, even if I just take 1/4 of a pill.</span>
+                                    And I hate taking pills anyway. <span
+                                            class="bg-action">I have opted to not take HRT</span><span
+                                            class="bg-context"> because breast cancer runs in my family.</span> In all
+                                    other ways, I&#39;m in great health, <span class="bg-conseq">but these constant naps make me feel guilty!</span>
+                                    Is this normal? Should I look into something I haven&#39;t been?</p>
+                            </div>
+
+                            <div class="commentary">
+                                <p><b>Score: 76%-100% </b></p>
+                                This post relates a lot of information about an individual&#39;s struggles to address
+                                weight gain and exhaustion (or tireness) due to the onset of perimenopause. Note that
+                                many of the actions are in fact intentional decisions not to act (e.g. not taking HRT,
+                                not taking sleeping pills).
+                            </div>
+
+                            <h2>Example 2</h2>
+
+                            <div><strong>Key:</strong><span class="bg-context">Context.</span> <span class="bg-event">Initiating event.</span>
+                                <span class="bg-action">Action or plan.</span> <span
+                                        class="bg-conseq">Consequence.</span></div>
+
+                            <div class="content">
+                                <p><span class="bg-context">I am a controlled elileptic. I am currently taking Depakoate, Phenobarbital and Tegretol and haven&#39;t had a siezure in years.</span>
+                                    <span class="bg-event">However, I am having a problems where I can get started with my wife physically but at the last minute I am unable to perform. It seems to go away.</span>
+                                    Is there something that I can do which will help me with this problem. I have tried
+                                    almost everything? Any suggestions would be welcome.</p>
+                            </div>
+
+                            <div class="commentary">
+                                <p><b>Score: No story</b></p>
+                                This one is tricky - there is a set up for a story, but because the &quot;I have tried
+                                almost everything&quot; does not a plan or action explicit, it does not meet our
+                                criteria!
+                            </div>
+
+                            <h2>Example 3</h2>
+
+                            <div><strong>Key:</strong><span class="bg-context">Context.</span> <span class="bg-event">Initiating event.</span>
+                                <span class="bg-action">Action or plan.</span> <span
+                                        class="bg-conseq">Consequence.</span></div>
+
+                            <div class="content">
+                                <p>Thanks Beth, I&#39;m not used to anybody careing for me. I have no friends. I&#39;m
+                                    very independent and I have always had to take care of myself and raise myself. I
+                                    think I did a pretty good job. The only thing I didn&#39;t have was guidance to tell
+                                    me right from wrong, but all I had to do was look around. So you can see why I&#39;m
+                                    so independent. (stubborn as they say). I&#39;ve suffered so long my attitude now is
+                                    who cares. It&#39;&gt;s my daughter and son-in-law that are in the Navy, not my son.
+                                    They have been around the world, they have been in harms way. When any of your
+                                    family are in the Military it is always the not knowing when they are out of the
+                                    country. I hope to go see them in November to take care of there newborn for a few
+                                    weeks if my health is good, or I&#39;ll just suck it up like my husband says and
+                                    bite the pain and do what I have to do for my 1st grandchild due the end of
+                                    September. Thanks for caring. Jayne</p>
+                            </div>
+
+                            <div class="commentary">
+                                <p><b>Score: No story</b></p>
+                                Again, there is some stuff in here that seems like it might be a story, but we see no
+                                initiating event, and little in the way of explicit, intentional action. or plan.
+                            </div>
+
+                            <h2>Example 4</h2>
+
+                            <div><strong>Key:</strong><span class="bg-context">Context.</span> <span class="bg-event">Initiating event.</span>
+                                <span class="bg-action">Action or plan.</span> <span
+                                        class="bg-conseq">Consequence.</span></div>
+
+                            <div class="content">
+                                <p>I believe chest pain warrants another examination by a doctor. From several years of
+                                    interacting with neuropathy patients, this type of pain seems to me quite uncommon
+                                    as a symptom of neuropathy. You could instead be dealing with some type of
+                                    circulatory disorder that is itself responsible for part of the pain and numbness in
+                                    your extremities. Likewise, be advised: neuropathy is NOT a medical entity in
+                                    itself, but rather a symptom of other medical disorders. It can be very difficult to
+                                    diagnose what that disorder is, but I don&#39;t think your long term interests are
+                                    well served by giving up on trying to get your doctors to do a better job of finding
+                                    that disorder. Regards and best, Red</p>
+                            </div>
+
+                            <div class="commentary">
+                                <p><b>Score: No story</b></p>
+                                Just advice here. No story.
+                            </div>
+
+                            <h2>Example 5</h2>
+
+                            <div><strong>Key:</strong><span class="bg-context">Context.</span> <span class="bg-event">Initiating event.</span>
+                                <span class="bg-action">Action or plan.</span> <span
+                                        class="bg-conseq">Consequence.</span></div>
+
+                            <div class="content">
+                                <p>Hi everyone. Just wanted to share that my kitten, who was really more like my baby,
+                                    died this week of FIP. I had never heard of it and wanted to share in case (God
+                                    forbid) this ever happens to you. <span class="bg-event">Our little guy gradually showed symptoms of lethargy, losing appetite, no interest in any toys... he just slept all the time.</span>
+                                    <span class="bg-action">We took him to the vet as soon as we realized he was sleeping way more than normal, and they put him in the hospital thinking it was a parasite that was attacking his red blood cells and causing him to be anemic. After a day &amp; a night in the emergency clinic,</span>
+                                    <span class="bg-conseq">the doctor discovered that his belly was swelling with fluid.</span>
+                                    <span class="bg-context">At that point, I was at a family funeral, but my husband was home</span>
+                                    <span class="bg-action">and went immediately to the hospital to be with him for a few minutes. After discussing the condition,</span>
+                                    <span class="bg-conseq">we learned that it was fatal, incurable, and could not have been prevented.</span><span
+                                            class="bg-event">So because of his pain,</span><span class="action">we decided to let him go.</span>
+                                    <span class="bg-conseq">It&#39;s been heartbreaking,</span> especially because he
+                                    was only 8 months old. He was the most beautiful Russian Blue with a personality
+                                    that kept us laughing. He lived to cuddle with us and make us happy. If you feel
+                                    like your cat is exhibiting unusual lethargy, I encourage you to quickly take him to
+                                    your vet. If it&#39;s a less dangerous condition, you might have a chance to keep
+                                    him healthy! We have fond memories and will miss our little guy very much.</p>
+                            </div>
+
+                            <div class="commentary">
+                                <p><b>Score: 50%-75%</b></p>
+                                Fairly heartbreaking story about the death of a kitten :(. A bit of advice tacked on at
+                                the end.
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- End Content Body --><!-- close container -->
+        <style type="text/css">fieldset, .content {
+            padding: 10px;
+            background: #ffd090;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .commentary {
+            padding: 10px;
+            background: #cdf0ff;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .bg-event {
+            background-color: LightCoral
+        }
+
+        .bg-action {
+            background-color: DarkSeaGreen
+        }
+
+        .bg-conseq {
+            background-color: LightSkyBlue
+        }
+
+        .bg-context {
+            background-color: #fffc98
+        }
+
+        table.inputField {
+            width: 100%;
+        }
+
+        table.inputField td {
+            padding: 5px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        </style>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+
+        $('form').submit(function (event) {
+
+
+            var all_answered = true;
+
+            $("input:radio").each(function () {
+                var name = $(this).attr("name");
+                if ($("input:radio[name=" + name + "]:checked").length == 0) {
+                    all_answered = false;
+
+                }
+            });
+            if (!all_answered) {
+                event.preventDefault();
+                alert("Please answer each question");
+            }
+            return all_answered;
+        });
+    });
+    turkSetAssignmentID();
+</script>
+</body>
+</html>
